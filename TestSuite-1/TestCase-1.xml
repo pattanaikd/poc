@@ -71,6 +71,12 @@
       <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
+  <con:testStep type="datasink" name="DataSink" id="bd35cf11-eacb-41a3-832e-9d5764b89920">
+    <con:settings/>
+    <con:config xsi:type="con:DataSinkStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:properties/>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
