@@ -3,6 +3,26 @@
   <con:settings>
     <con:setting id="c776ecd3-652e-41a7-9184-d0b5674b9ef3fileName">TestCase-1</con:setting>
   </con:settings>
+  <con:testStep type="datasource" name="DataSource" id="a32b24b8-607d-4378-9374-25ce31cc6dee">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="JSON">
+        <con:configuration>
+          <sourceStep>REST Request</sourceStep>
+          <sourceProperty>parameters</sourceProperty>
+          <rowPath/>
+          <columnPath>parameters</columnPath>
+          <columnPath>blobIn</columnPath>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>parameters</con:property>
+      <con:property>blobIn</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
   <con:testStep type="restrequest" name="REST Request" id="11d826f9-e404-4258-8541-3d4f99329688">
     <con:settings/>
     <con:config service="http://undcemr-odr013.nswhealth.net:8080 1" resourcePath="/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_post_meds" methodName="855_toc_post_meds" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -13,6 +33,12 @@
         <con:endpoint>http://undcemr-odr013.nswhealth.net:8080</con:endpoint>
         <con:request/>
         <con:originalUri>http://undcemr-odr013.nswhealth.net/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_post_meds</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="a2c22f94-17ed-487b-b8ad-a44c00df3029" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
         <con:assertion type="Response SLA Assertion" id="6624b5d7-43d8-4a72-9ef1-ef2a2f66562b" name="Response SLA">
           <con:configuration>
             <SLA>200</SLA>
@@ -35,6 +61,14 @@
           <con:entry>blobIn</con:entry>
         </con:parameterOrder>
       </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="5a3e411c-332c-4fe7-abea-cf21ca103320">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSource</dataSourceStep>
+      <targetStep>REST Request</targetStep>
+      <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties/>
