@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c776ecd3-652e-41a7-9184-d0b5674b9ef3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c776ecd3-652e-41a7-9184-d0b5674b9ef3fileName">TestCase-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="11d826f9-e404-4258-8541-3d4f99329688">
+    <con:settings/>
+    <con:config service="http://undcemr-odr013.nswhealth.net:8080 1" resourcePath="/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_post_meds" methodName="855_toc_post_meds" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="86dc945a-1562-4b39-9d44-0f5914423447" mediaType="application/x-www-form-urlencoded" postQueryString="true">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>http://undcemr-odr013.nswhealth.net:8080</con:endpoint>
+        <con:request/>
+        <con:originalUri>http://undcemr-odr013.nswhealth.net/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_post_meds</con:originalUri>
+        <con:assertion type="Response SLA Assertion" id="6624b5d7-43d8-4a72-9ef1-ef2a2f66562b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:username>sbrown@dev.undc.nswhealth.net</con:username>
+          <con:password>sbrown</con:password>
+          <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+          <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+          <con:authType>Global HTTP Settings</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="blobIn" value="${DataSource#blobIn}"/>
+          <con:entry key="parameters" value="${DataSource#parameters}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>parameters</con:entry>
+          <con:entry>blobIn</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

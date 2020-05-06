@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="855_toc_valdt_meds" path="/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_valdt_meds" id="826916a5-c79e-4a1f-9004-86a446207c1f" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="826916a5-c79e-4a1f-9004-86a446207c1ffileName">855_toc_valdt_meds</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="855_toc_valdt_meds" id="75cc934f-9287-44aa-b79a-f80d7a612282" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>parameters</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>blobIn</con:name>
+        <con:value/>
+        <con:style>PLAIN</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/xml</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=ISO-8859-1</con:mediaType>
+      <con:status>401 500</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/plain; charset=ISO-8859-1</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="ad58274b-09ac-4965-a128-4b067254d531" mediaType="application/x-www-form-urlencoded" postQueryString="true">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://undcemr-odr013.nswhealth.net:8080</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://undcemr-odr013.nswhealth.net/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_valdt_meds</con:originalUri>
+      <con:credentials>
+        <con:username>sbrown@dev.undc.nswhealth.net</con:username>
+        <con:password>sbrown</con:password>
+        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+        <con:authType>Global HTTP Settings</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="blobIn" value="{&quot;medsList&quot;:{&quot;mappedCernerDrugs&quot;:[{&quot;drugName&quot;:&quot;paracetamol&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!11985&quot;,&quot;primary&quot;:&quot;15839566&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Suppository&quot;,&quot;doseFormCode&quot;:&quot;15856761&quot;,&quot;frequency&quot;:&quot;QID&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Rectal&quot;,&quot;routeCode&quot;:&quot;266430436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;1000&quot;,&quot;doseQuantityUnit&quot;:&quot;mg&quot;}}},{&quot;drugName&quot;:&quot;pantoprazole&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!31753&quot;,&quot;primary&quot;:&quot;15839454&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Granules-EC&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;night&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Nasogastric&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;40&quot;,&quot;doseQuantityUnit&quot;:&quot;mg&quot;}}},{&quot;drugName&quot;:&quot;enoxaparin&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!12889&quot;,&quot;primary&quot;:&quot;15826935&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Solution-Inj&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;daily&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Subcut&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;40&quot;,&quot;doseQuantityUnit&quot;:&quot;mg&quot;}}},{&quot;drugName&quot;:&quot;salbutamol 100 mcg/inh pressurised inhalation&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!50199&quot;,&quot;primary&quot;:&quot;15844846&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Inhaler-Aerosol&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;6 hourly&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Inhalation&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;100&quot;,&quot;doseQuantityUnit&quot;:&quot;mcg&quot;}}},{&quot;drugName&quot;:&quot;heparin&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!12175&quot;,&quot;primary&quot;:&quot;15830662&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Solution-Inj&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;BD&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Subcut&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;5000&quot;,&quot;doseQuantityUnit&quot;:&quot;units&quot;}}},{&quot;drugName&quot;:&quot;ondansetron&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!12527&quot;,&quot;primary&quot;:&quot;15838670&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Solution-Inj&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;TDS&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;IV Injection&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;4&quot;,&quot;doseQuantityUnit&quot;:&quot;mg&quot;}}},{&quot;drugName&quot;:&quot;Endone 5 mg oral tablet&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!62780&quot;,&quot;primary&quot;:&quot;15839148&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Tablet&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;6 hourly&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Oral&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;5&quot;,&quot;doseQuantityUnit&quot;:&quot;mg&quot;}}},{&quot;drugName&quot;:&quot;docusate-senna 50 mg-8 mg oral tablet&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!61681&quot;,&quot;primary&quot;:&quot;15826001&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Tablet&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;BD&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Oral&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;50&quot;,&quot;doseQuantityUnit&quot;:&quot;tabs&quot;}}},{&quot;drugName&quot;:&quot;levothyroxine sodium&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!12195&quot;,&quot;primary&quot;:&quot;15833992&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Tablet&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;daily (Mon to Fri)&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Oral&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;50&quot;,&quot;doseQuantityUnit&quot;:&quot;mcg&quot;}}},{&quot;drugName&quot;:&quot;Chlorvescent 14 mmol oral effervescent tablet&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!83053&quot;,&quot;primary&quot;:&quot;15841975&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Tab-Disintegrating&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;midday&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Oral&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;2&quot;,&quot;doseQuantityUnit&quot;:&quot;tabs&quot;}}},{&quot;drugName&quot;:&quot;nicotine 21 mg/24 hr transdermal modified release patch&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!28119&quot;,&quot;primary&quot;:&quot;15837472&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Patch&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;morning&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Transdermal&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;1&quot;,&quot;doseQuantityUnit&quot;:&quot;patches&quot;}}},{&quot;drugName&quot;:&quot;amoxicillin-clavulanate 1000 mg-200 mg intravenous injection&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!49141&quot;,&quot;primary&quot;:&quot;15818202&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Vial&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;8 hourly&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;IV Injection&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;1&quot;,&quot;doseQuantityUnit&quot;:&quot;g&quot;}}},{&quot;drugName&quot;:&quot;amoxicillin-clavulanate 875 mg-125 mg oral tablet&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!26564&quot;,&quot;primary&quot;:&quot;15818122&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Tablet&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;BD (with or after food)&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Oral&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;875&quot;,&quot;doseQuantityUnit&quot;:&quot;mg&quot;}}},{&quot;drugName&quot;:&quot;glycopyrronium (glycopyrrolate)&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!12596&quot;,&quot;primary&quot;:&quot;15830422&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Solution-Inj&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;6 hourly&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;IM&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;200&quot;,&quot;doseQuantityUnit&quot;:&quot;mcg&quot;}}},{&quot;drugName&quot;:&quot;sulfamethoxazole-trimethoprim 800 mg-160 mg oral tablet&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!28131&quot;,&quot;primary&quot;:&quot;15846358&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Tablet&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;BD (on Mon &amp; Thu)&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;Oral&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;160&quot;,&quot;doseQuantityUnit&quot;:&quot;mg&quot;}}},{&quot;drugName&quot;:&quot;potassium chloride&quot;,&quot;localID&quot;:{&quot;CNUM&quot;:&quot;MUL.ORD-SYN!12249&quot;,&quot;primary&quot;:&quot;15841928&quot;},&quot;filteringParameters&quot;:{&quot;doseForm&quot;:&quot;Solution-Inj&quot;,&quot;doseFormCode&quot;:&quot;15456761&quot;,&quot;frequency&quot;:&quot;ONCE&quot;,&quot;frequencyCode&quot;:&quot;14867532&quot;,&quot;route&quot;:&quot;IV Infusion&quot;,&quot;routeCode&quot;:&quot;2664436&quot;,&quot;dosage&quot;:{&quot;doseQuantityValue&quot;:&quot;10&quot;,&quot;doseQuantityUnit&quot;:&quot;mmol&quot;}}}]}}"/>
+        <con:entry key="parameters" value="&quot;MINE&quot;"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>parameters</con:entry>
+        <con:entry>blobIn</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

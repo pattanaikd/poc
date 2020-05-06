@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="855_toc_post_meds" path="/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_post_meds" id="5d76d89c-2370-4321-84ce-4893e7768f66" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5d76d89c-2370-4321-84ce-4893e7768f66fileName">855_toc_post_meds</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="855_toc_post_meds" id="dba8d9a3-896b-4bd0-9556-537bf55c3b07" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>parameters</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter required="true">
+        <con:name>blobIn</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/plain; charset=ISO-8859-1</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element>data</con:element>
+    </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>text/html; charset=ISO-8859-1</con:mediaType>
+      <con:status>500</con:status>
+      <con:params/>
+      <con:element>html</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="86dc945a-1562-4b39-9d44-0f5914423447" mediaType="application/x-www-form-urlencoded" postQueryString="true">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>http://undcemr-odr013.nswhealth.net:8080</con:endpoint>
+      <con:request/>
+      <con:originalUri>http://undcemr-odr013.nswhealth.net/discern-mpages/dev.undc.nswhealth.net/mpages/reports/855_toc_post_meds</con:originalUri>
+      <con:credentials>
+        <con:username>sbrown@dev.undc.nswhealth.net</con:username>
+        <con:password>sbrown</con:password>
+        <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+        <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+        <con:authType>Global HTTP Settings</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="blobIn" value="{&quot;orderableList&quot;:[{&quot;orderDetailList&quot;:[{&quot;fieldId&quot;:&quot;12715.00&quot;,&quot;fieldMeaning&quot;:&quot;STRENGTHDOSE&quot;,&quot;fieldMeaningId&quot;:&quot;2056.00&quot;,&quot;fieldDisplayValue&quot;:&quot;100&quot;,&quot;fieldValue&quot;:&quot;100.00&quot;},{&quot;fieldId&quot;:&quot;12716.00&quot;,&quot;fieldMeaning&quot;:&quot;STRENGTHDOSEUNIT&quot;,&quot;fieldMeaningId&quot;:&quot;2057.00&quot;,&quot;fieldDisplayValue&quot;:&quot;mg&quot;,&quot;fieldValue&quot;:&quot;287.00&quot;},{&quot;fieldId&quot;:&quot;12711.00&quot;,&quot;fieldMeaning&quot;:&quot;RXROUTE&quot;,&quot;fieldMeaningId&quot;:&quot;2050.00&quot;,&quot;fieldDisplayValue&quot;:&quot;Intraperitoneal&quot;,&quot;fieldValue&quot;:&quot;15814200.00&quot;},{&quot;fieldId&quot;:&quot;12693.00&quot;,&quot;fieldMeaning&quot;:&quot;DRUGFORM&quot;,&quot;fieldMeaningId&quot;:&quot;2014.00&quot;,&quot;fieldDisplayValue&quot;:&quot;Capsule&quot;,&quot;fieldValue&quot;:&quot;15814051.00&quot;},{&quot;fieldId&quot;:&quot;12690.00&quot;,&quot;fieldMeaning&quot;:&quot;FREQ&quot;,&quot;fieldMeaningId&quot;:&quot;2011.00&quot;,&quot;fieldDisplayValue&quot;:&quot;BID&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;12703.00&quot;,&quot;fieldMeaning&quot;:&quot;SCH/PRN&quot;,&quot;fieldMeaningId&quot;:&quot;2037.00&quot;,&quot;fieldDisplayValue&quot;:&quot;No&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;12721.00&quot;,&quot;fieldMeaning&quot;:&quot;DURATION&quot;,&quot;fieldMeaningId&quot;:&quot;2061.00&quot;,&quot;fieldDisplayValue&quot;:&quot;10&quot;,&quot;fieldValue&quot;:&quot;10.00&quot;},{&quot;fieldId&quot;:&quot;12723.00&quot;,&quot;fieldMeaning&quot;:&quot;DURATIONUNIT&quot;,&quot;fieldMeaningId&quot;:&quot;2062.00&quot;,&quot;fieldDisplayValue&quot;:&quot;day(s)&quot;,&quot;fieldValue&quot;:&quot;251.00&quot;},{&quot;fieldId&quot;:&quot;12590.00&quot;,&quot;fieldMeaning&quot;:&quot;INDICATION&quot;,&quot;fieldMeaningId&quot;:&quot;15.00&quot;,&quot;fieldDisplayValue&quot;:&quot;Testing&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;12620.00&quot;,&quot;fieldMeaning&quot;:&quot;REQSTARTDTTM&quot;,&quot;fieldMeaningId&quot;:&quot;51.00&quot;,&quot;fieldDisplayValue&quot;:&quot;11/02/2020&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;,&quot;dtTmValue&quot;:&quot;20200211000000+1100&quot;},{&quot;fieldId&quot;:&quot;35465.00&quot;,&quot;fieldMeaning&quot;:&quot;NEXTDOSEDTTM&quot;,&quot;fieldMeaningId&quot;:&quot;2096.00&quot;,&quot;fieldDisplayValue&quot;:&quot;11/02/2020&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;,&quot;dtTmValue&quot;:&quot;20200211000000+1100&quot;},{&quot;fieldId&quot;:&quot;30714857.00&quot;,&quot;fieldMeaning&quot;:&quot;OTHER&quot;,&quot;fieldMeaningId&quot;:&quot;9000.00&quot;,&quot;fieldDisplayValue&quot;:&quot;No&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;30714857.00&quot;,&quot;fieldMeaning&quot;:&quot;OTHER&quot;,&quot;fieldMeaningId&quot;:&quot;9000.00&quot;,&quot;fieldDisplayValue&quot;:&quot;True&quot;,&quot;fieldValue&quot;:&quot;1.00&quot;}],&quot;orderSentenceDisplay&quot;:&quot;&quot;,&quot;mnemonic&quot;:&quot;acetazolamide&quot;,&quot;catalogCd&quot;:&quot;15816333.00&quot;,&quot;synonymId&quot;:&quot;15816335.00&quot;,&quot;formatId&quot;:&quot;15814971.00&quot;},{&quot;orderDetailList&quot;:[{&quot;fieldId&quot;:&quot;12715.00&quot;,&quot;fieldMeaning&quot;:&quot;STRENGTHDOSE&quot;,&quot;fieldMeaningId&quot;:&quot;2056.00&quot;,&quot;fieldDisplayValue&quot;:&quot;100&quot;,&quot;fieldValue&quot;:&quot;100.00&quot;},{&quot;fieldId&quot;:&quot;12716.00&quot;,&quot;fieldMeaning&quot;:&quot;STRENGTHDOSEUNIT&quot;,&quot;fieldMeaningId&quot;:&quot;2057.00&quot;,&quot;fieldDisplayValue&quot;:&quot;mg/kg&quot;,&quot;fieldValue&quot;:&quot;50141.00&quot;},{&quot;fieldId&quot;:&quot;12690.00&quot;,&quot;fieldMeaning&quot;:&quot;FREQ&quot;,&quot;fieldMeaningId&quot;:&quot;2011.00&quot;,&quot;fieldDisplayValue&quot;:&quot;QID&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;12703.00&quot;,&quot;fieldMeaning&quot;:&quot;SCH/PRN&quot;,&quot;fieldMeaningId&quot;:&quot;2037.00&quot;,&quot;fieldDisplayValue&quot;:&quot;No&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;12721.00&quot;,&quot;fieldMeaning&quot;:&quot;DURATION&quot;,&quot;fieldMeaningId&quot;:&quot;2061.00&quot;,&quot;fieldDisplayValue&quot;:&quot;10&quot;,&quot;fieldValue&quot;:&quot;10.00&quot;},{&quot;fieldId&quot;:&quot;12723.00&quot;,&quot;fieldMeaning&quot;:&quot;DURATIONUNIT&quot;,&quot;fieldMeaningId&quot;:&quot;2062.00&quot;,&quot;fieldDisplayValue&quot;:&quot;day(s)&quot;,&quot;fieldValue&quot;:&quot;251.00&quot;},{&quot;fieldId&quot;:&quot;12590.00&quot;,&quot;fieldMeaning&quot;:&quot;INDICATION&quot;,&quot;fieldMeaningId&quot;:&quot;15.00&quot;,&quot;fieldDisplayValue&quot;:&quot;TESTING indication&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;12620.00&quot;,&quot;fieldMeaning&quot;:&quot;REQSTARTDTTM&quot;,&quot;fieldMeaningId&quot;:&quot;51.00&quot;,&quot;fieldDisplayValue&quot;:&quot;11/02/2020&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;,&quot;dtTmValue&quot;:&quot;20200211000000+1100&quot;},{&quot;fieldId&quot;:&quot;35465.00&quot;,&quot;fieldMeaning&quot;:&quot;NEXTDOSEDTTM&quot;,&quot;fieldMeaningId&quot;:&quot;2096.00&quot;,&quot;fieldDisplayValue&quot;:&quot;11/02/2020&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;,&quot;dtTmValue&quot;:&quot;20200211000000+1100&quot;},{&quot;fieldId&quot;:&quot;30714857.00&quot;,&quot;fieldMeaning&quot;:&quot;OTHER&quot;,&quot;fieldMeaningId&quot;:&quot;9000.00&quot;,&quot;fieldDisplayValue&quot;:&quot;No&quot;,&quot;fieldValue&quot;:&quot;0.00&quot;},{&quot;fieldId&quot;:&quot;30714857.00&quot;,&quot;fieldMeaning&quot;:&quot;OTHER&quot;,&quot;fieldMeaningId&quot;:&quot;9000.00&quot;,&quot;fieldDisplayValue&quot;:&quot;True&quot;,&quot;fieldValue&quot;:&quot;1.00&quot;}],&quot;orderSentenceDisplay&quot;:&quot;&quot;,&quot;mnemonic&quot;:&quot;paracetamol 100 mg/mL oral solution&quot;,&quot;catalogCd&quot;:&quot;15839564.00&quot;,&quot;synonymId&quot;:&quot;15839742.00&quot;,&quot;formatId&quot;:&quot;15814971.00&quot;}],&quot;scrathPad&quot;:null,&quot;spChangeInd&quot;:1,&quot;cancelOrder&quot;:&quot;99.00&quot;,&quot;scratchPad&quot;:{&quot;spDetailList&quot;:null,&quot;spActionFlag&quot;:1},&quot;orderStatusUpdateList&quot;:[{&quot;orderNumber&quot;:15279601.00,&quot;newOrderStatus&quot;:&quot;SUSPEND&quot;},{&quot;orderNumber&quot;:15279535.00,&quot;newOrderStatus&quot;:&quot;SUSPEND&quot;}]}"/>
+        <con:entry key="parameters" value="&quot;MINE&quot;,&quot;174515.0&quot;,&quot;155711.0&quot;"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>parameters</con:entry>
+        <con:entry>blobIn</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
