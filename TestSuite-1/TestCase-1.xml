@@ -77,6 +77,16 @@
       <con:properties/>
     </con:config>
   </con:testStep>
+  <con:testStep type="jdbc" name="JDBC Request" id="197692d0-1494-48e0-b43d-cd009efb6a83">
+    <con:settings>
+      <con:setting id="prettyPrintResponse">true</con:setting>
+    </con:settings>
+    <con:config xsi:type="con:JdbcRequestTestStep" convertColumnNamesToUpperCase="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dbConnectionName xsi:nil="true"/>
+      <con:connectionProperties/>
+      <con:properties/>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
